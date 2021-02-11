@@ -1,0 +1,74 @@
+<div
+  class="card text-center"
+  style="width: 500px; margin-left: 40px; margin-top: 20px"
+>
+  <form [formGroup]="camisaForm">
+    <div class="form-group camposForm">
+      <app-field-validation-container [required]="true">
+        <label label class="fontSize" for="marca">Marca </label>
+        <input
+          input
+          type="text"
+          class="form-control"
+          id="marca"
+          placeholder="Ex: Nike"
+          formControlName="marca"
+        />
+      </app-field-validation-container>
+    </div>
+    <div class="form-group camposForm">
+      <app-field-validation-container [required]="true">
+        <label label class="fontSize" for="cor">Cor </label>
+        <input
+          input
+          type="text"
+          class="form-control"
+          id="cor"
+          placeholder="Ex: Azul"
+          formControlName="cor"
+        />
+      </app-field-validation-container>
+    </div>
+    <div class="form-group camposForm">
+      <app-field-validation-container [required]="true">
+        <label label class="fontSize" for="tamanho">Tamanho </label>
+        <select
+          input
+          class="form-control"
+          id="tamanho"
+          formControlName="tamanho"
+        >
+          <option>P</option>
+          <option>M</option>
+          <option>G</option>
+        </select>
+      </app-field-validation-container>
+    </div>
+    <div class="form-group camposForm">
+      <app-field-validation-container [required]="true">
+        <label label class="fontSize" for="preco">Preço </label>
+        <input
+          input
+          type="text"
+          class="form-control"
+          id="preco"
+          placeholder="Ex: R$:11,25"
+          formControlName="preco"
+        />
+      </app-field-validation-container>
+    </div>
+    <a
+      (click)="onSave(camisaForm.value)"
+      class="btn btn-primary botoes text-white"
+      type="submit"
+      role="button"
+      >Adicionar</a
+    >
+    <a
+      (click)="onCancel()"
+      class="btn btn-secondary botoes text-white"
+      role="button"
+      >Calcelar</a
+    >
+  </form>
+</div>

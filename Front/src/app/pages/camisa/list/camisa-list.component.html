@@ -1,0 +1,43 @@
+<a
+  [routerLink]="['/camisa/cadastrar']"
+  class="btn btn-primary"
+  style="margin-left: 40px; margin-top: 20px; margin-bottom: 20px"
+  role="button"
+  ><i class="fas fa-plus-circle"></i> Adicionar</a
+>
+<div class="card" style="margin-left: 40px; font-size: 16px">
+  <table class="table thead-dark">
+    <thead>
+      <tr>
+        <th scope="col">Marca</th>
+        <th scope="col">Cor</th>
+        <th scope="col">Tamanho</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let camisa of camisas">
+        <td>{{ camisa.marca }}</td>
+        <td>{{ camisa.cor }}</td>
+        <td>{{ camisa.tamanho }}</td>
+        <td>{{ camisa.preco }}</td>
+        <td class="actions">
+          <a
+            class="btn btn-primary botoes text-white"
+            role="button"
+            [routerLink]="['alterar/', camisa.id]"
+          >
+          </a>
+          <a
+            class="btn btn-primary botoes text-white"
+            role="button"
+            (click)="deleteById(camisa.id)"
+          >
+            Deletar
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

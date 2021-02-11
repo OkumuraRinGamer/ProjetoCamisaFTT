@@ -1,0 +1,16 @@
+.camposForm {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.fontSize {
+  font-size: 16px;
+}
+
+.botoes {
+  margin: 10px;
+}
+
+.invalid {
+  border-color: red;
+}
