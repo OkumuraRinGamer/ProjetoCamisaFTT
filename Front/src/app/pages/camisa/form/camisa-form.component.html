@@ -1,9 +1,6 @@
-<div
-  class="card text-center"
-  style="width: 500px; margin-left: 40px; margin-top: 20px"
->
+<div class="card text-center" style="max-width: 300px; margin: 20px auto">
   <form [formGroup]="camisaForm">
-    <div class="form-group camposForm">
+    <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="marca">Marca </label>
         <input
@@ -16,7 +13,7 @@
         />
       </app-field-validation-container>
     </div>
-    <div class="form-group camposForm">
+    <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="cor">Cor </label>
         <input
@@ -29,7 +26,7 @@
         />
       </app-field-validation-container>
     </div>
-    <div class="form-group camposForm">
+    <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="tamanho">Tamanho </label>
         <select
@@ -44,7 +41,7 @@
         </select>
       </app-field-validation-container>
     </div>
-    <div class="form-group camposForm">
+    <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="preco">Preço </label>
         <input

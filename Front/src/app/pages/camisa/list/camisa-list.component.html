@@ -1,43 +1,54 @@
-<a
-  [routerLink]="['/camisa/cadastrar']"
-  class="btn btn-primary"
-  style="margin-left: 40px; margin-top: 20px; margin-bottom: 20px"
-  role="button"
-  ><i class="fas fa-plus-circle"></i> Adicionar</a
->
-<div class="card" style="margin-left: 40px; font-size: 16px">
-  <table class="table thead-dark">
-    <thead>
-      <tr>
-        <th scope="col">Marca</th>
-        <th scope="col">Cor</th>
-        <th scope="col">Tamanho</th>
-        <th scope="col">Preço</th>
-        <th scope="col">Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let camisa of camisas">
-        <td>{{ camisa.marca }}</td>
-        <td>{{ camisa.cor }}</td>
-        <td>{{ camisa.tamanho }}</td>
-        <td>{{ camisa.preco }}</td>
-        <td class="actions">
+<div style="text-align: center; font-size: 40px; margin-top: 5px">
+  <p>Camisas</p>
+  <a
+    [routerLink]="['/camisa/cadastrar']"
+    class="btn btn-primary"
+    style="margin-top: -50px"
+    role="button"
+    ><i class="fas fa-plus-circle"></i> Adicionar</a
+  >
+</div>
+
+<div class="card" style="margin: 20px; font-size: 16px">
+  <div class="row">
+    <div
+      class="col-sm d-flex justify-content-center"
+      *ngFor="let camisa of camisas"
+      style="margin: 45px 0"
+    >
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <img
+            src="http://thrashcomh.com.br/thrash/wp-content/uploads/2017/11/camiseta.png"
+            class="card-img-top"
+            alt="camisa"
+            width="500"
+            height="210"
+            style="margin-bottom: 20px"
+          />
+          <h5 class="card-title">Marca: {{ camisa.marca }}</h5>
+          <h5 class="card-title">Cor: {{ camisa.cor }}</h5>
+          <h5 class="card-title">Tamanho: {{ camisa.tamanho }}</h5>
+          <h5 class="card-title">Preço: {{ camisa.preco }}</h5>
+
           <a
-            class="btn btn-primary botoes text-white"
+            class="btn btn-warning actions-btn text-white"
             role="button"
             [routerLink]="['alterar/', camisa.id]"
+            style="margin-left: 80px"
           >
+            Editar
           </a>
+
           <a
-            class="btn btn-primary botoes text-white"
+            class="btn btn-danger actions-btn text-white"
             role="button"
             (click)="deleteById(camisa.id)"
           >
-            Deletar
+            Apagar
           </a>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
