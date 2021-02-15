@@ -7,4 +7,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/camisa")
 public class CamisaController extends AbstractController<Camisa> {
+
 }

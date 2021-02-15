@@ -9,23 +9,24 @@
   >
 </div>
 
-<div class="card" style="margin: 20px; font-size: 16px">
+<div class="card bg-dark" style="margin: 20px; font-size: 16px">
   <div class="row">
     <div
-      class="col-sm d-flex justify-content-center"
+      class="col-sm d-flex justify-content-center bg-dark"
       *ngFor="let camisa of camisas"
-      style="margin: 45px 0"
+      style="margin: 20px 0"
     >
-      <div class="card" style="width: 18rem">
+      <div class="card prod-card bg-dark" style="border-color: #8d8d8d">
         <div class="card-body">
           <img
-            src="http://thrashcomh.com.br/thrash/wp-content/uploads/2017/11/camiseta.png"
+            src="https://images.tcdn.com.br/img/img_prod/680735/camiseta_sistema_solar_925_1_20200802195553.jpg"
             class="card-img-top"
             alt="camisa"
             width="500"
             height="210"
             style="margin-bottom: 20px"
           />
+
           <h5 class="card-title">Marca: {{ camisa.marca }}</h5>
           <h5 class="card-title">Cor: {{ camisa.cor }}</h5>
           <h5 class="card-title">Tamanho: {{ camisa.tamanho }}</h5>
