@@ -1,7 +1,7 @@
 <div style="text-align: center; font-size: 40px; margin-top: 5px">
-  <p>Camisas</p>
+  <p>Camisas Femininas</p>
   <a
-    [routerLink]="['/camisa/cadastrar']"
+    [routerLink]="['/camisasFemininas/cadastrar']"
     class="btn btn-primary"
     style="margin-top: -50px"
     role="button"
@@ -9,21 +9,21 @@
   >
 </div>
 
-<div class="card bg-dark" style="margin: 20px; font-size: 16px">
+<div class="card bg-dark" style="margin: 20px; font-size: 16px; border: 0">
   <div class="row">
     <div
       class="col-sm d-flex justify-content-center bg-dark"
-      *ngFor="let camisa of camisas"
+      *ngFor="let camisa of camisasFemininas"
       style="margin: 20px 0"
     >
       <div class="card prod-card bg-dark" style="border-color: #8d8d8d">
-        <div class="card-body">
+        <div class="card-body img-backprodut">
           <img
-            src="https://images.tcdn.com.br/img/img_prod/680735/camiseta_sistema_solar_925_1_20200802195553.jpg"
+            src="https://img.elo7.com.br/product/zoom/2737EA7/camiseta-infantil-feminina-dungeons-and-dragons-personagem-camisetas.jpg"
             class="card-img-top"
             alt="camisa"
             width="500"
-            height="210"
+            height="235"
             style="margin-bottom: 20px"
           />
 
@@ -36,9 +36,9 @@
             class="btn btn-warning actions-btn text-white"
             role="button"
             [routerLink]="['alterar/', camisa.id]"
-            style="margin-left: 80px"
+            style="margin-left: 42px"
           >
-            Editar
+            <i class="fas fa-pencil-alt"></i> Editar
           </a>
 
           <a
@@ -46,7 +46,7 @@
             role="button"
             (click)="deleteById(camisa.id)"
           >
-            Apagar
+            <i class="fas fa-trash"></i> Apagar
           </a>
         </div>
       </div>

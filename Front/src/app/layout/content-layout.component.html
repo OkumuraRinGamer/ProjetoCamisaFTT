@@ -1,10 +1,11 @@
-<nav
-  class="navbar navbar-dark justify-content-center bg-dark"
-  style="height: 55px"
->
-  <div class="text-white" style="font-size: 40px">
+<nav class="navbar navbar-dark justify-content-center" style="height: 55px">
+  <a
+    [routerLink]="['/']"
+    class="text-white"
+    style="font-size: 40px; text-decoration: none"
+  >
     <i class="fas fa-hat-wizard"></i> Magic-IO
-  </div>
+  </a>
 </nav>
 <nav
   class="navbar navbar-dark justify-content-center"
@@ -19,17 +20,61 @@
   <ul class="nav" style="margin-top: -10px">
     <li class="nav-item">
       <a class="nav-link active" [routerLink]="['/']" style="color: white"
-        >Inicio</a
+        ><i class="fas fa-home"></i> Inicio</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" style="color: white">></a>
+    </li>
+    <div class="dropdown show">
+      <a
+        class="btn btn-link dropdown-toggle text-white"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+        style="text-decoration: none"
+      >
+        <i class="fas fa-tshirt"></i> Camisas
+      </a>
+
+      <div
+        class="dropdown-menu"
+        aria-labelledby="dropdownMenuLink"
+        style="margin-top: -10px; background-color: #373737"
+      >
+        <a
+          class="dropdown-item text-white dropdown-itens"
+          [routerLink]="['/camisasMasculinas']"
+          ><i class="fas fa-mars"></i> Masculinas</a
+        >
+        <a
+          class="dropdown-item text-white dropdown-itens"
+          [routerLink]="['/camisasFemininas']"
+          ><i class="fas fa-venus"></i> Femininas</a
+        >
+      </div>
+    </div>
+    <!-- <li class="nav-item">
+      <a
+        class="nav-link"
+        [routerLink]="['/camisasMasculinas']"
+        style="color: white"
+        >Camisas Masculinas</a
       >
     </li>
     <li class="nav-item">
       <a class="nav-link" style="color: white">></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" [routerLink]="['/camisa']" style="color: white"
-        >Camisas</a
+      <a
+        class="nav-link"
+        [routerLink]="['/camisasFemininas']"
+        style="color: white"
+        >Camisas Femininas</a
       >
-    </li>
+    </li> -->
   </ul>
 </nav>
 

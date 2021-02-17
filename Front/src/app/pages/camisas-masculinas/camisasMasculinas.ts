@@ -1,4 +1,4 @@
-export default class Camisa {
+export default class CamisasMasculinas {
   id: number;
   marca: string;
   cor: string;

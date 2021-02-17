@@ -1,23 +1,23 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
-import Camisa from "../camisa";
-import { CamisaService } from "../camisa.service";
+import { CamisasFemininasService } from "../camisas-femininas.service";
+import CamisasFemininas from "../camisasFemininas";
 
 @Component({
-  selector: "app-camisa-form",
-  templateUrl: "./camisa-form.component.html",
-  styleUrls: ["./camisa-form.component.css"],
+  selector: "app-camisas-femininas-form",
+  templateUrl: "./camisas-femininas-form.component.html",
+  styleUrls: ["./camisas-femininas-form.component.css"],
 })
-export class CamisaFormComponent implements OnInit {
+export class CamisasFemininasFormComponent implements OnInit {
   constructor(
     private router: Router,
     private builder: FormBuilder,
-    private camisaService: CamisaService,
+    private camisasFemininasService: CamisasFemininasService,
     private activatedRoute: ActivatedRoute
   ) {}
 
-  camisaForm: FormGroup;
+  camisasFemininasForm: FormGroup;
   action: string;
   validated: boolean;
 
@@ -31,7 +31,7 @@ export class CamisaFormComponent implements OnInit {
   }
 
   createForm(): void {
-    this.camisaForm = this.builder.group({
+    this.camisasFemininasForm = this.builder.group({
       id: null,
       marca: [null, [Validators.required, Validators.maxLength(120)]],
       cor: [null, [Validators.required, Validators.maxLength(120)]],
@@ -42,27 +42,27 @@ export class CamisaFormComponent implements OnInit {
 
   setValue() {
     const id = this.activatedRoute.snapshot.url[1].path;
-    this.camisaService
+    this.camisasFemininasService
       .findById(Number(id))
-      .subscribe((response) => this.camisaForm.patchValue(response));
+      .subscribe((response) => this.camisasFemininasForm.patchValue(response));
   }
 
-  onSave(value: Camisa): void {
-    Object.keys(this.camisaForm.controls).forEach((field) =>
-      this.camisaForm.get(field).markAllAsTouched()
+  onSave(value: CamisasFemininas): void {
+    Object.keys(this.camisasFemininasForm.controls).forEach((field) =>
+      this.camisasFemininasForm.get(field).markAllAsTouched()
     );
 
-    if (this.camisaForm.invalid) {
+    if (this.camisasFemininasForm.invalid) {
       return;
     }
 
     console.log(value);
-    this.camisaService
+    this.camisasFemininasService
       .save(value)
-      .subscribe((response) => this.router.navigate(["camisa"]));
+      .subscribe((response) => this.router.navigate(["camisasFemininas"]));
   }
 
   onCancel(): void {
-    this.router.navigate(["camisa"]);
+    this.router.navigate(["camisasFemininas"]);
   }
 }

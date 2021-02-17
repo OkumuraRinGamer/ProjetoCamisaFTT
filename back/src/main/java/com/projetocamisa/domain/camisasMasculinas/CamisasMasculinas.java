@@ -1,4 +1,4 @@
-package com.projetocamisa.domain.camisa;
+package com.projetocamisa.domain.camisasMasculinas;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,10 +10,10 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
-@Table(name="camisa")
+@Table(name = "camisas_masculinas")
 @Getter
 @Setter
-public class Camisa implements Serializable {
+public class CamisasMasculinas implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id

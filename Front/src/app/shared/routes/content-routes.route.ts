@@ -7,8 +7,17 @@ export const CONTENT_ROUTE: Routes = [
       import("../../pages/inicio/inicio.module").then((m) => m.BemvindoModule),
   },
   {
-    path: "camisa",
+    path: "camisasMasculinas",
     loadChildren: () =>
-      import("../../pages/camisa/camisa.module").then((m) => m.CamisaModule),
+      import("../../pages/camisas-masculinas/camisas-masculinas.module").then(
+        (m) => m.CamisasMasculinasModule
+      ),
+  },
+  {
+    path: "camisasFemininas",
+    loadChildren: () =>
+      import("../../pages/camisas-femininas/camisas-femininas.module").then(
+        (m) => m.CamisasFemininasModule
+      ),
   },
 ];

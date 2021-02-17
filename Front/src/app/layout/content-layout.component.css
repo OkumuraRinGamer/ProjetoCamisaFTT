@@ -1,3 +1,7 @@
 .footer {
   margin-top: 50px;
 }
+
+.dropdown-itens:hover {
+  background-color: #616161;
+}
