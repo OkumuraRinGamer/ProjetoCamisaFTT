@@ -1,0 +1,21 @@
+.logo {
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.nav-itens-bar {
+  height: 35px;
+  margin-top: 20px;
+}
+
+.dropdown-camisa {
+  text-decoration: none;
+}
+
+.mg-top {
+  margin-top: -10px;
+}
+
+.dropdown-itens:hover {
+  background-color: #616161;
+}

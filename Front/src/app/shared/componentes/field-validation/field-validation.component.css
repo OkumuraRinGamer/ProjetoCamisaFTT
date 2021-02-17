@@ -19,3 +19,7 @@
 :host ::ng-deep .has-success input {
   border-color: green;
 }
+
+span {
+  font-size: 15px;
+}

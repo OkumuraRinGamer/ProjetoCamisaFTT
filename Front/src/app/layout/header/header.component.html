@@ -1,0 +1,50 @@
+<!-- Cabeçalho -->
+<nav class="navbar navbar-dark justify-content-center">
+  <a [routerLink]="['/']" class="text-white logo">
+    <i class="fas fa-hat-wizard"></i> Magic-IO
+  </a>
+</nav>
+<!-- Itens Nav -->
+<nav
+  class="navbar navbar-dark justify-content-center background-gray nav-itens-bar"
+>
+  <ul class="nav mg-top">
+    <li class="nav-item">
+      <a class="nav-link active text-white" [routerLink]="['/']"
+        ><i class="fas fa-home"></i> Inicio</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-white">></a>
+    </li>
+    <!-- Camisas Dropdown -->
+    <div class="dropdown show">
+      <a
+        class="btn btn-link dropdown-toggle text-white dropdown-camisa"
+        role="button"
+        id="dropdownMenuLink"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <i class="fas fa-tshirt"></i> Camisas
+      </a>
+
+      <div
+        class="dropdown-menu background-gray mg-top"
+        aria-labelledby="dropdownMenuLink"
+      >
+        <a
+          class="dropdown-item text-white dropdown-itens"
+          [routerLink]="['/camisasMasculinas']"
+          ><i class="fas fa-mars"></i> Masculinas</a
+        >
+        <a
+          class="dropdown-item text-white dropdown-itens"
+          [routerLink]="['/camisasFemininas']"
+          ><i class="fas fa-venus"></i> Femininas</a
+        >
+      </div>
+    </div>
+  </ul>
+</nav>

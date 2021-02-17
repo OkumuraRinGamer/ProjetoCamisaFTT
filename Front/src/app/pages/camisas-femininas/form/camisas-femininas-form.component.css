@@ -6,7 +6,10 @@
   margin: 10px;
 }
 
-.img-backform {
+.form-back {
   background-image: url("../../../shared/img/FormFem.png");
   background-repeat: no-repeat;
+  max-width: 300px;
+  margin: 20px auto;
+  border: none;
 }

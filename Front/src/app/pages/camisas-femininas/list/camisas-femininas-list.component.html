@@ -1,30 +1,26 @@
-<div style="text-align: center; font-size: 40px; margin-top: 5px">
+<!-- Titulo -->
+<div class="title">
   <p>Camisas Femininas</p>
   <a
     [routerLink]="['/camisasFemininas/cadastrar']"
-    class="btn btn-primary"
-    style="margin-top: -50px"
+    class="btn btn-primary add-btn"
     role="button"
     ><i class="fas fa-plus-circle"></i> Adicionar</a
   >
 </div>
-
-<div class="card bg-dark" style="margin: 20px; font-size: 16px; border: 0">
+<!-- Itens -->
+<div class="card bg-dark back-card">
   <div class="row">
     <div
-      class="col-sm d-flex justify-content-center bg-dark"
+      class="col-sm d-flex justify-content-center bg-dark camisa-card-base"
       *ngFor="let camisa of camisasFemininas"
-      style="margin: 20px 0"
     >
-      <div class="card prod-card bg-dark" style="border-color: #8d8d8d">
+      <div class="card bg-dark prod-card">
         <div class="card-body img-backprodut">
           <img
             src="https://img.elo7.com.br/product/zoom/2737EA7/camiseta-infantil-feminina-dungeons-and-dragons-personagem-camisetas.jpg"
-            class="card-img-top"
+            class="card-img-top prod-img"
             alt="camisa"
-            width="500"
-            height="235"
-            style="margin-bottom: 20px"
           />
 
           <h5 class="card-title">Marca: {{ camisa.marca }}</h5>
@@ -36,7 +32,6 @@
             class="btn btn-warning actions-btn text-white"
             role="button"
             [routerLink]="['alterar/', camisa.id]"
-            style="margin-left: 42px"
           >
             <i class="fas fa-pencil-alt"></i> Editar
           </a>

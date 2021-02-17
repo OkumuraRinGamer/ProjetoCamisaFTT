@@ -1,8 +1,22 @@
+.inicio {
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.bemvindo {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
 .img-inicio {
   background-image: url("../../../shared/img/inicio.png");
   width: 320px;
   height: 178px;
   margin-top: 20px;
+}
+
+.centro {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }

@@ -1,10 +1,27 @@
-.actions-btn {
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: -10px;
+.back-card {
+  margin: 20px;
+  font-size: 16px;
+  border: 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 5px;
+}
+
+.add-btn {
+  margin-top: -50px;
+}
+
+.camisa-card-base {
+  margin: 20px 0;
 }
 
 .prod-card {
+  background-image: url("../../../shared/img/DnDLogo.png");
+  background-repeat: no-repeat;
+  border-color: #8d8d8d;
   width: 18rem;
 }
 
@@ -16,7 +33,14 @@
   -webkit-transform: scale(1.1);
 }
 
-.img-backprodut {
-  background-image: url("../../../shared/img/DnDLogo.png");
-  background-repeat: no-repeat;
+.prod-img {
+  margin-bottom: 20px;
+  width: 246px;
+  height: 235px;
+}
+
+.actions-btn {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }

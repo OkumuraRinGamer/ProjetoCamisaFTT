@@ -5,8 +5,6 @@
   <ng-content select="[label]"></ng-content>
   <ng-content select="[input]"></ng-content>
 
-  <span *ngIf="hasError()" style="font-size: 15px"> Preencha esse campo </span>
-  <span *ngIf="hasSuccess()" style="font-size: 15px">
-    Campo preenchido com sucesso
-  </span>
+  <span *ngIf="hasError()"> Preencha esse campo </span>
+  <span *ngIf="hasSuccess()"> Campo preenchido com sucesso </span>
 </div>

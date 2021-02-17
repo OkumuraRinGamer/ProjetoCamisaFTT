@@ -1,8 +1,6 @@
-<div
-  class="card text-center bg-dark img-backform"
-  style="max-width: 300px; margin: 20px auto; border: none"
->
+<div class="card text-center bg-dark form-back">
   <form [formGroup]="camisasFemininasForm">
+    <!-- Marca Input -->
     <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="marca">Marca </label>
@@ -16,6 +14,7 @@
         />
       </app-field-validation-container>
     </div>
+    <!-- Cor Input -->
     <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="cor">Cor </label>
@@ -29,6 +28,7 @@
         />
       </app-field-validation-container>
     </div>
+    <!-- Tamanho Select -->
     <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="tamanho">Tamanho </label>
@@ -44,6 +44,7 @@
         </select>
       </app-field-validation-container>
     </div>
+    <!-- Preço Input -->
     <div class="form-group">
       <app-field-validation-container [required]="true">
         <label label class="fontSize" for="preco">Preço </label>
@@ -57,6 +58,7 @@
         />
       </app-field-validation-container>
     </div>
+    <!-- Adicionar Button -->
     <a
       (click)="onSave(camisasFemininasForm.value)"
       class="btn btn-primary botoes text-white"
@@ -64,6 +66,7 @@
       role="button"
       ><i class="fas fa-plus-circle"></i> Adicionar</a
     >
+    <!-- Cancelar Button -->
     <a
       (click)="onCancel()"
       class="btn btn-secondary botoes text-white"
